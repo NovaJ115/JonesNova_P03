@@ -5,15 +5,18 @@ using TMPro;
 
 public class UniversalDialogueManager : MonoBehaviour
 {
-
+    [Header("Dialogue Input")]
+    [SerializeField]
     public TMP_Text nameText;
+    [SerializeField]
     public TMP_Text dialogueText;
 
 
-    public Queue<string> sentences;
-    public float typeSpeed;
+    private Queue<string> sentences;
+    [SerializeField]
+    private float typeSpeed;
     
-    public bool canContinue;
+    private bool canContinue;
     public bool dialogueOver;
     
 
@@ -53,8 +56,11 @@ public class UniversalDialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue)
     {
         dialogueOver = false;
-
-        nameText.text = dialogue.name;
+        if(nameText != null)
+        {
+            nameText.text = dialogue.name;
+        }
+        
         
         
         
