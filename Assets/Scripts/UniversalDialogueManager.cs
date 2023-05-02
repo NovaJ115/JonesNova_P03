@@ -11,32 +11,18 @@ public class UniversalDialogueManager : MonoBehaviour
     [SerializeField]
     public TMP_Text dialogueText;
 
-
     private Queue<string> sentences;
     [SerializeField]
     private float typeSpeed;
     
     private bool canContinue;
     public bool dialogueOver;
-    
-
-
-    //public GameObject animations;
-
-    //public VoiceLineManager voiceLine;
-
-    //public AudioSource buttonClick;
-
-    
 
     void Start()
     {
         sentences = new Queue<string>();
         canContinue = true;
         typeSpeed = 0.02f;
-        
-        
-         
     }
 
     void Update()
@@ -61,9 +47,6 @@ public class UniversalDialogueManager : MonoBehaviour
             nameText.text = dialogue.name;
         }
         
-        
-        
-        
         sentences.Clear();
         canContinue = true;
         foreach (string sentence in dialogue.sentences)
@@ -86,14 +69,8 @@ public class UniversalDialogueManager : MonoBehaviour
             return;
 
         }
-        
-        
+
         string sentence = sentences.Dequeue();
-
-
-
-        //voiceLine.NextVoiceLine();
-        
 
         StopAllCoroutines();
 
@@ -106,20 +83,16 @@ public class UniversalDialogueManager : MonoBehaviour
     public IEnumerator TypeSentence(string sentence)
     {
         
-
             dialogueText.text = "";
             foreach (char letter in sentence.ToCharArray())
             {
                 
                 dialogueText.text += letter;
 
-
                 yield return new WaitForSeconds(typeSpeed);
 
             }
-        
-
-
+ 
     }
 
 

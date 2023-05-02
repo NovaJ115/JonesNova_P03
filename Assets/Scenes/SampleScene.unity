@@ -700,17 +700,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d0c439a83ebc3544bad8882558d4c10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textBoxType: 0
+  textBoxType: 1
+  nameColor: {r: 1, g: 1, b: 1, a: 0}
+  dialogueColor: {r: 1, g: 1, b: 1, a: 0}
   dialogue:
     name: Test Name!
     sentences:
     - This is some placeholder dialogue.
-    - I Love Jay! POOP
-    - Hey look, it's working :)
+    - Woah, look at that, more text!
+    - The text can go pretty long, depending on what style of dialogue box that you
+      choose. If you choose the "Just Dialogue" option in the inspector, then you
+      would be able to put even more text!!
   dialogueManager: {fileID: 263611379}
   portrait: {fileID: 0}
   portraitBG: {fileID: 0}
-  portaitBGColor: {r: 0, g: 0, b: 0, a: 0}
+  portaitBGColor: {r: 0.4056604, g: 0.4056604, b: 0.4056604, a: 0}
   animator: {fileID: 263611381}
   textBox: {fileID: 1260085612}
   styleVariants:
@@ -1856,7 +1860,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1873031f5334039489792a5ea07d6a27, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 93559e503c5681649af9e70f56afbc4d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2588,7 +2592,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1873031f5334039489792a5ea07d6a27, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 93559e503c5681649af9e70f56afbc4d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
