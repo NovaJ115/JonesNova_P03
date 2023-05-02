@@ -8,6 +8,8 @@ public class TextBoxDialogue : MonoBehaviour
     [Header("Dialogue and Style")]
     [SerializeField]
     private TextBoxType textBoxType;
+    public Color nameColor;
+    public Color dialogueColor;
     [SerializeField]
     private Dialogue dialogue;
     [SerializeField]
@@ -32,6 +34,8 @@ public class TextBoxDialogue : MonoBehaviour
     {
         textBox.SetActive(false);
         portaitBGColor.a = 1;
+        nameColor.a = 1;
+        dialogueColor.a = 1;
     }
 
     public void StartDialogue()
@@ -50,6 +54,14 @@ public class TextBoxDialogue : MonoBehaviour
         if(portraitBG != null)
         {
             portraitBG.color = portaitBGColor;
+        }
+        if(dialogueManager.dialogueText != null)
+        {
+            dialogueManager.dialogueText.color = dialogueColor;
+        }
+        if(dialogueManager.nameText != null)
+        {
+            dialogueManager.nameText.color = nameColor;
         }
         
         //ELEMENT 0
